@@ -2,17 +2,7 @@
 session_start();
 
 // Connect to MySQL database
-$servername = "localhost";
-$username = "root"; // Default XAMPP user
-$password = ""; // Default XAMPP password
-$dbname = "hospital_management";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('db_connect.php');
 
 // Get login details from form
 $user = $_POST['username'];
@@ -37,4 +27,3 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-?>

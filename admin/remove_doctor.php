@@ -7,16 +7,7 @@ if (!isset($_SESSION['admin'])) {
 }
 
 // Connect to the database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "hospital_management";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('db_connect.php');
 
 // Retrieve the doctor ID from the form
 $doctorId = $_POST['doctor_id'];
@@ -32,4 +23,3 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-?>
