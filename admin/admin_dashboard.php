@@ -33,7 +33,24 @@
                     </select>
                     <input type="email" name="email" placeholder="Email" class="input-box" required>
                     <input type="text" name="phone" placeholder="Phone" class="input-box" required>
-                    <input type="text" name="specialty" placeholder="Specialty" class="input-box" required>
+<!-- changes here changes here changes here changes here changes here changes here changes here-->
+                    <label for="select">Department:</label>
+                <select id="select" required>
+                    <option value="">Select department</option>
+                        <?php
+                        include("db_connect.php");
+                        $depts=mysqli_query($conn,"SELECT * from dept");
+                        while($d=mysqli_fetch_array($depts)){
+                            ?>
+                        <option value="<?php echo $d['ID'] ?>"><?php echo $d['depart']?></option>
+                        <?php } // incomplete-->send the id converted to department in database 
+                        mysqli_close($conn);?>
+                    </optgroup>
+                    
+                   
+                </select>
+
+                    <!-- <input type="text" name="specialty" placeholder="Specialty" class="input-box" required> -->
                     <label for="profile_picture" class="upload-label">Upload Profile Picture</label>
                     <input type="file" name="profile_picture" id="profile_picture" class="input-box">
                     <button type="submit" class="add-button">Add Doctor</button>
@@ -42,17 +59,7 @@
             <section id="doctor-list">
                 <h2>Doctor List</h2>
                 <?php
-                // Connect to the database
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "hospital_management";
-
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
+               include('db_connect.php');
 
                 // Fetch doctor information
                 $sql = "SELECT * FROM doctors ORDER BY specialty, name";
