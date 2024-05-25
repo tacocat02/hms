@@ -58,7 +58,12 @@
             <section id="doctor-list">
                 <h2>Doctor List</h2>
                 <?php
-               include('C:\xampp\htdocs\hms\db_connect.php');
+                // Connect to the database
+                include('C:\xampp\htdocs\hms\db_connect.php');
+
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
                 // Fetch doctor information
                 $sql = "SELECT * FROM doctors ORDER BY specialty, name";

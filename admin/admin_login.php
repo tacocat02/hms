@@ -14,4 +14,3 @@ if ($username === $adminUsername && $password === $adminPassword) {
 } else {
     echo "Invalid username or password.";
 }
-?>
