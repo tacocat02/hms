@@ -7,16 +7,7 @@ if (!isset($_SESSION['admin'])) {
 }
 
 // Connect to the database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "hospital_management";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('C:\xampp\htdocs\hms\db_connect.php');
 
 // Retrieve form data
 $doctorUsername = $_POST['username'];
@@ -50,4 +41,3 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-?>

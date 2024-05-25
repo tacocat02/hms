@@ -35,7 +35,7 @@
                     <input type="text" name="phone" placeholder="Phone" class="input-box" required>
 <!-- changes here changes here changes here changes here changes here changes here changes here-->
                     <label for="select">Department:</label>
-                        <select id="select" required>
+                        <select id="select" name="specialty" placeholder="Specialty" class="input-box" required>
                             <option value="">Select department</option>
                             <?php
                             include('C:\xampp\htdocs\hms\db_connect.php');
