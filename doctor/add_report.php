@@ -7,7 +7,7 @@ if (!isset($_SESSION['doctor_username'])) {
 }
 
 // Connect to the database
-include('db_connect.php');
+include('C:\xampp\htdocs\hms\db_connect.php');
 
 // Retrieve form data
 $appointment_id = $_POST['appointment_id'];

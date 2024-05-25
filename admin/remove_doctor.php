@@ -7,7 +7,7 @@ if (!isset($_SESSION['admin'])) {
 }
 
 // Connect to the database
-include('db_connect.php');
+include('C:\xampp\htdocs\hms\db_connect.php');
 
 // Retrieve the doctor ID from the form
 $doctorId = $_POST['doctor_id'];

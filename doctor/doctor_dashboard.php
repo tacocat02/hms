@@ -28,7 +28,7 @@
             }
 
             // Connect to the database
-            include('db_connect.php');
+            include('C:\xampp\htdocs\hms\db_connect.php');
 
             // Fetch doctor information
             $user = $_SESSION['doctor_username'];

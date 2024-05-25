@@ -43,12 +43,7 @@
                 <h2>Doctor List</h2>
                 <?php
                 // Connect to the database
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "hospital_management";
-
-                $conn = new mysqli($servername, $username, $password, $dbname);
+                include('C:\xampp\htdocs\hms\db_connect.php');
 
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
