@@ -6,6 +6,8 @@ if (!isset($_SESSION['admin'])) {
     exit();
 }
 
+
+// Connect to the database
 include('C:\xampp\htdocs\hms\db_connect.php');
 
 // Retrieve form data
@@ -40,4 +42,3 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-?>

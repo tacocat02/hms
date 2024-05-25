@@ -33,7 +33,23 @@
                     </select>
                     <input type="email" name="email" placeholder="Email" class="input-box" required>
                     <input type="text" name="phone" placeholder="Phone" class="input-box" required>
-                    <input type="text" name="specialty" placeholder="Specialty" class="input-box" required>
+<!-- changes here changes here changes here changes here changes here changes here changes here-->
+                    <label for="select">Department:</label>
+                        <select id="select" name="specialty" placeholder="Specialty" class="input-box" required>
+                            <option value="">Select department</option>
+                            <?php
+                            include('C:\xampp\htdocs\hms\db_connect.php');
+                            $depts=mysqli_query($conn,"SELECT * from dept");
+                            while($d=mysqli_fetch_array($depts)){
+                                ?>
+                            <option value="<?php echo $d['depart'] ?>"><?php echo $d['depart']?></option>
+                            <?php }
+                            mysqli_close($conn);?>
+                        
+                   
+                        </select>
+
+                    <!-- <input type="text" name="specialty" placeholder="Specialty" class="input-box" required> -->
                     <label for="profile_picture" class="upload-label">Upload Profile Picture</label>
                     <input type="file" name="profile_picture" id="profile_picture" class="input-box">
                     <button type="submit" class="add-button">Add Doctor</button>
