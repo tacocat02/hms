@@ -177,10 +177,11 @@
                             echo "<p><strong>Name:</strong> " . $row['name'] . "</p>";
                             echo "<p><strong>Specialty:</strong> " . $row['specialty'] . "</p>";
                             echo "<p><strong>Phone:</strong> " . $row['phone'] . "</p>";
-                            echo "<p><strong>Status:</strong> " . ($row['status'] ? "Active" : "Disabled") . "</p>";
+                            $status = isset($row['status']) ? $row['status'] : null;
+                            echo "<p><strong>Status:</strong> " . ($status ? "Active" : "Disabled") . "</p>";
                             echo "</div>";
-                            $action = $row['status'] ? "Disable" : "Enable";
-                            $button_class = $row['status'] ? "disable-button" : "enable-button";
+                            $action = $status ? "Disable" : "Enable";
+                            $button_class = $status ? "disable-button" : "enable-button";
                             echo "<form action='doctor_status.php' method='post' class='remove-form'>";
                             echo "<input type='hidden' name='doctor_id' value='" . $row['id'] . "'>";
                             echo "<button type='submit' class='$button_class'>" . $action . "</button>";
