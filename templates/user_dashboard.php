@@ -182,13 +182,13 @@
         <div class="tab-content" id="medical-records">
             <div class="text">Book Appointment</div>
             <div class="book-appointment-content">
-                         "<section id='appointments'>";
-                             "<h2>Appointments</h2>";
+                         <section id='appointments'>
+                             <h2>Appointments</h2>
                             <!-- Appointment booking form -->
-                             "<h3>Book an Appointment</h3>";
-                             "<form action="book_appointment.php" method='post'>";
-                             "<label for='doctor'>Select Doctor:</label>";
-                             "<select name='doctor_id' required>";
+                             <h3>Book an Appointment</h3>
+                             <form action="book_appointment.php" method='post'>
+                             <label for='doctor'>Select Doctor:</label>
+                             <select name='doctor_id' required>
                             <?php
                             // Fetch doctors
                             $doctorSql = "SELECT id, name, specialty FROM doctors";
