@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Doctor Login - Hospital Management System</title>
-    <link rel="stylesheet" type="text/css" href="doctor_style.css">
+    <link rel="stylesheet" type="text/css" href="/medi-connect-main-2/css/doctor/doctor_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="login-section">
             <div class="login-header">
-                <img src="logo.png" alt="MediConnect Logo" class="logo">
+                <img src="/medi-connect-main-2/main-logo.png" alt="MediConnect Logo" class="logo">
                 <h1>MediConnect</h1>
                 <h2>Doctor Panel</h2>
             </div>

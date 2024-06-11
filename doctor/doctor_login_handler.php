@@ -2,7 +2,7 @@
 session_start();
 
 // Connect to MySQL database
-include('C:\xampp\htdocs\hms\db_connect.php');
+include('C:\xampp\htdocs\medi-connect-main-2\db_connect.php');
 
 // Get login details from form
 $user = $_POST['username'];
