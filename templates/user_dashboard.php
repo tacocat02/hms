@@ -103,17 +103,7 @@
                     exit();
                 }
 
-                // Connect to the database
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "hospital_management";
-
-                $conn = new mysqli($servername, $username, $password, $dbname);
-
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
+               include('C:\xampp\htdocs\medi-connect-main-2\db_connect.php');
 
                 // Fetch user information
                 $user = $_SESSION['username'];
@@ -192,16 +182,14 @@
         <div class="tab-content" id="medical-records">
             <div class="text">Book Appointment</div>
             <div class="book-appointment-content">
-                        <?php
-                        echo "<section id='appointments'>";
-                            echo "<h2>Appointments</h2>";
-
-                            // Appointment booking form
-                            echo "<h3>Book an Appointment</h3>";
-                            echo "<form action='book_appointment.php' method='post'>";
-                            echo "<label for='doctor'>Select Doctor:</label>";
-                            echo "<select name='doctor_id' required>";
-                            
+                         "<section id='appointments'>";
+                             "<h2>Appointments</h2>";
+                            <!-- Appointment booking form -->
+                             "<h3>Book an Appointment</h3>";
+                             "<form action="book_appointment.php" method='post'>";
+                             "<label for='doctor'>Select Doctor:</label>";
+                             "<select name='doctor_id' required>";
+                            <?php
                             // Fetch doctors
                             $doctorSql = "SELECT id, name, specialty FROM doctors";
                             $doctorResult = $conn->query($doctorSql);
