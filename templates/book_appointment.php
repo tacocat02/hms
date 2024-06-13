@@ -7,16 +7,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Connect to the database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "hospital_management";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('C:\xampp\htdocs\medi-connect-main-2\db_connect.php');
 
 // Retrieve form data
 $user = $_SESSION['username'];

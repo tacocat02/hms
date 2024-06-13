@@ -138,7 +138,7 @@
         </div>
 
         <div class="tab-content" id="appointment">
-            <div class="text">Your Appointment
+            <div class="text">Your Appointment</div>
             <div class="appointment-table">
                         <?php
                         // Fetch and display appointments
@@ -175,9 +175,9 @@
                                 echo "<p>You have no appointments.</p>";
                             }
                             ?>
-                
+            </div>    
         </div>
-        </div>
+    
 
         <div class="tab-content" id="medical-records">
             <div class="text">Book Appointment</div>
@@ -186,7 +186,7 @@
                              <h2>Appointments</h2>
                             <!-- Appointment booking form -->
                              <h3>Book an Appointment</h3>
-                             <form action="book_appointment.php" method='post'>
+                            <form action="book_appointment.php" method='post'>
                              <label for='doctor'>Select Doctor:</label>
                              <select name='doctor_id' required>
                             <?php
