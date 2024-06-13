@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Doctor Dashboard - Hospital Management System</title>
-    <link rel="stylesheet" type="text/css" href="/medi-connect-main-2/css/doctor/doctor_dashboard_style.css">
+    <link rel="stylesheet" type="text/css" href="/medi-connect-main-2/css/doctor/doctor_dashboard_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
